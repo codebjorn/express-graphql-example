@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  app:
+    image: node:14-alpine3.14
+    user: 1000:1000
+    container_name: skillable-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    command: >
+      sh -c "[ -d "./node_modules" ] && npm start || tail -f /dev/null"
+    depends_on: 
+      - db
+    volumes:
+      - ../:/var/www
+    ports:
+      - "3000:3000"
+    networks:
+      - skillable
+
+  db:
+    image: postgres:latest
+    container_name: skillable-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: "skillable"
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      SERVICE_TAGS: dev
+      SERVICE_NAME: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - skillable
+    volumes:
+      - postgres:/data/postgres
+
+networks:
+  skillable:
+    driver: bridge
+
+volumes:
+  postgres:

@@ -1,7 +1,16 @@
-# Awesome Project Build with TypeORM
+# Express GraphQL Typescript Example WIP
 
-Steps to run this project:
+Simple project made on Express, Apollo, TypeORM and etc..
 
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
+## Todo
+1. Logging
+2. Better esling fixes
+3. Unit testing
+4. Profiling
+
+## Requirements
+
+Requirements are:
+
+- Latest Node.js
+- Yarn

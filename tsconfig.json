@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["es2018", "esnext.asynciterable"],
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app": ["src/app.ts"],
+      "@helpers": ["src/helpers.ts"],
+      "@abstract/*": ["src/abstract/*"],
+      "@config/*": ["config/*"],
+      "@dictionary": ["config/dictionary.ts"],
+      "@entity/*": ["src/entity/*"],
+      "@factory/*": ["src/factory/*"],
+      "@interface/*": ["src/interface/*"],
+      "@repository/*": ["src/repository/*"],
+      "@resolver/*": ["src/resolver/*"],
+      "@schema/*": ["src/schema/*"],
+      "@service/*": ["src/service/*"],
+    }
+  }
+}

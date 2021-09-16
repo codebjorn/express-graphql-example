@@ -1,0 +1,15 @@
+{
+  "name": "skillable",
+  "dockerComposeFile": ["docker-compose.yaml"],
+  "service": "app",
+  "workspaceFolder": "/var/www",
+"remoteUser": "node",
+"extensions": [
+	"editorconfig.editorconfig",
+	"irongeek.vscode-env",
+	"graphql.vscode-graphql",
+	"esbenp.prettier-vscode",
+	"redhat.vscode-yaml",
+	"amatiasq.sort-imports"
+]
+}
